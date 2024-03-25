@@ -7,6 +7,9 @@ on:
   pull_request:
     branches:
       - main
+  schedule:
+    # At 06:00 on day-of-month 1 in every month.
+    - cron: "0 6 1 */1 *"
 
 env:
   docker-image-name: ilcardella/rpi-pico-sdk
